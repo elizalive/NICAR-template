@@ -1,0 +1,130 @@
+/******* THE CSS *******/
+
+#container {
+	margin-left:40px;
+}
+
+#header{
+	width: 667px;
+	margin-bottom: 20px;
+}
+
+#header h1{
+	font: 39px Arial;
+	margin-bottom: 10px;
+	color: #4d4d4d;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+
+#gallery{
+	width: 541px;
+	border: 2px solid #ccc;
+	overflow: hidden;
+	padding: 0 0 10px 10px;
+}
+
+.thumbnail{
+	float: left;
+	margin: 8px 8px 0 0;
+	border: 2px solid #ccc;
+	background-color: #08D1B9;
+	padding: 10px;
+}
+
+.thumb_img{
+	width: 140px;
+	border: 4px solid teal;
+}
+
+#display_results {
+	width: 521px;
+	border: 2px solid #ccc;
+	background-color: #FFDA70; 
+	padding: 15px 1px 10px 30px;
+	margin: 10px 10px 10px 0;
+	overflow: hidden;
+	clear: both; 
+}
+
+#display_total, #display_num {
+	float: left;
+}
+
+#display_total {
+	border-left: 2px solid #ccc;
+	margin-left: 40px;
+	padding-left: 40px;
+	height: 216px;
+}
+
+.display_txt {
+	margin-left: 7px;
+	margin-bottom: 3px;
+	color: #4d4d4d;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#display_img {
+	margin:10px;
+	border: 4px solid black;
+}
+
+#total { 
+	font-size: 96px;
+	margin-top: .4em;
+}
+
+
+
+
+
+/******* THE JQUERY/JAVASCRIPT *******/
+
+/** create the color-change hover **/
+
+	$(".thumbnail").hover(function(){
+		$(this).css({"background-color":"#FFDA70"}); 
+	}, function(){
+		$(this).css({"background-color":"#08D1B9"});	
+	});	
+
+
+/** updating the total **/
+
+	var total = 0;
+
+	$(".thumb_img").click(function(){		
+		var numvalue = $(this).attr("num-value");
+		total = total + parseInt(numvalue);
+		$("#total").html(total);
+		
+	});
+
+
+/** updating the number display image **/
+
+// place in the .thumb_img.click section
+
+		var photo_src = $(this).attr("src");
+		$("#display_img").attr("src", photo_src);
+
+
+
+/** resetting the total **/
+
+	$("#btn_reset").click(function(){
+		total = 0;
+		$("#total").html(total);
+		$("#display_img").attr("src", "img/num0.jpg");
+	});
+
+
+/** adding your greeting **/
+
+	$("#btn_yourname").click(function(){
+		var yourname = $("#yourname").val();
+		$("#hellotext").html("Hello, " + yourname + "!");
+	});

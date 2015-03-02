@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photo gallery</title>
+    
+	<!-- your CSS stylesheet -->	
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+	
+<div id="container">
+	<div id="header">
+		<h1 id="hellotext">Hello. What's your name?</h1>
+ 		<input id="yourname" type="text" name="fname" placeholder="name here">
+ 		<button id="btn_yourname">submit your name</button>
+	</div>
+	<div id="gallery">
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num1.jpg" num-value="1" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num2.jpg" num-value="2" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num3.jpg" num-value="3" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num4.jpg" num-value="4" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num5.jpg" num-value="5" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num6.jpg" num-value="6" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num7.jpg" num-value="7" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num8.jpg" num-value="8" />
+		</div>
+		<div class="thumbnail">
+			<img class="thumb_img" src="img/num9.jpg" num-value="9" />
+		</div>
+	</div>
+	<div id="display_results">
+		<div id="display_num">
+			<h3 class="display_txt">You picked:</h3>
+			<img id="display_img" src="img/num0.jpg"/>
+		</div>
+		<div id="display_total">
+			<button id="btn_reset">Reset total</button>
+			<h3 class="display_txt">Your total is now:</h3>
+			<p id="total">0</p>
+			
+		</div>
+	</div>
+
+</div> <!-- end container div -->
+	
+<!-- JAVASCRIPT -->
+	<script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
