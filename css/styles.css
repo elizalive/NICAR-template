@@ -3,3 +3,79 @@
    Date: February 2015
 */
 
+#container {
+	margin-left:40px;
+}
+
+#header{
+	width: 667px;
+	margin-bottom: 20px;
+}
+
+#header h1{
+	font: 39px Arial;
+	margin-bottom: 10px;
+	color: #4d4d4d;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+
+#gallery{
+	width: 541px;
+	border: none;
+	overflow: hidden;
+	padding: none;
+}
+
+.thumbnail{
+	float: left;
+	margin: 8px 8px 0 0;
+	border: 2px solid #ccc;
+	background-color: #08D1B9;
+	padding: 10px;
+}
+
+.thumb_img{
+	width: 140px;
+	border: 4px solid #08D1B9;
+}
+
+#display_results {
+	width: 521px;
+	border: 2px solid #ccc;
+	background-color: #FFDA70; 
+	padding: 15px 1px 10px 30px;
+	margin: 10px 10px 10px 0;
+	overflow: hidden;
+	clear: both; 
+}
+
+#display_total, #display_num {
+	float: left;
+}
+
+#display_total {
+	border-left: 2px solid #ccc;
+	margin-left: 40px;
+	padding-left: 40px;
+	height: 216px;
+}
+
+.display_txt {
+	margin-left: 7px;
+	margin-bottom: 3px;
+	color: #4d4d4d;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#display_img {
+	margin:10px;
+	border: 2px solid black;
+}
+
+#total { 
+	font-size: 96px;
+	margin-top: .4em;
+}
